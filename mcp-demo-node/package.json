@@ -2,14 +2,21 @@
   "name": "mcp-demo-node",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js\"",
+    "build": "tsup src/index.ts",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.0",
     "hono": "^4.7.5"
   },
   "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
     "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
-  }
+    "tsup": "^8.4.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.2",
+    "zod": "^3.24.2"
+  },
+  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
 }
