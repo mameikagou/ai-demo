@@ -4,6 +4,7 @@ import Router from 'koa-router'
 import { JSONFilePreset } from 'lowdb/node' // 7.0.1版本
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
+import { cluster } from 'cluster'
 
 // 手动获取__dirname变量
 const __filename = fileURLToPath(import.meta.url)
